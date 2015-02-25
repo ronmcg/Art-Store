@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Advertisements>
+  <Ad>
+    <ImageUrl>~/assets/nav-images/adBanSide.jpg</ImageUrl>
+    <NavigateUrl>~/SingleArtist.aspx?id=97</NavigateUrl>
+    <AlternateText>da Vinci</AlternateText>
+    <Impressions>1</Impressions>
+    <Height>600px</Height>
+    <Width>120px</Width>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/assets/nav-images/adside2.png</ImageUrl>
+    <NavigateUrl>~/SingleArtist.aspx?id=17</NavigateUrl>
+    <AlternateText>Monet</AlternateText>
+    <Impressions>1</Impressions>
+    <Height>600px</Height>
+    <Width>120px</Width>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/assets/nav-images/adside3.png</ImageUrl>
+    <NavigateUrl>~/SingleArtist.aspx?id=19</NavigateUrl>
+    <AlternateText>Van Gogh</AlternateText>
+    <Impressions>1</Impressions>
+    <Height>600px</Height>
+    <Width>120px</Width>
+  </Ad>
+</Advertisements>

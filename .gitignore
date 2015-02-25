@@ -6,6 +6,12 @@
 *.user
 *.sln.docstates
 
+#skip pics and db
+*.jpg
+*.mdf
+*.mdb
+*.ldf
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/

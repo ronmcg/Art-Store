@@ -1,0 +1,244 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register Src="~/Controls/FavouritesControl.ascx" TagPrefix="uc" TagName="Favourites" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>COMP 3512 - Assignment #2</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="Assets/css/normalize.css" rel="stylesheet" />
+    <link href="Assets/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <link href="Assets/css/styles.css" rel="stylesheet" />
+    <link href="Assets/css/rateit.css" rel="stylesheet" />
+    <script src="Assets/js/jquery.rateit.min.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]-->
+    <!--<script src="Assets/js/html5shiv.js"></script>
+      <script src="Assets/js/respond.min.js"></script>-->
+    <!--[endif]-->
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+
+        <!--This is for the AJAX on the user controls-->
+        <asp:ScriptManager ID="ScriptManagerLeaderboards" runat="server"></asp:ScriptManager>
+
+            <div class="col-md-10 left-mar">
+                <div class="container">
+                    <!-- Logo Nav Section -->
+                    <div id="logoNav">
+                        <a href="Default.aspx">
+                            <img src="Assets/nav-images/logo_art.png" alt="Art Store Logo" /></a>
+                    </div>
+
+                    <!--Utility (Registration) Nav Section -->
+                    <div class="navbar navbar-default utility-nav" role="navigation">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <!-- Collect the nav links and other content for toggling -->
+                        <div class="collapse navbar-collapse navbar-ex1-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <p class="right-adj">
+                                        <span class="greet">Greetings</span>,
+                                        <asp:LoginName ID="logName" runat="server" FormatString="<strong>{0}</strong> " />
+                                        <asp:Label ID="loginMsgMenuLeft" runat="server" />
+                                        <asp:LoginStatus ID="logStatus" runat="server" />
+                                        <asp:Label ID="loginMsgMenuRight" runat="server" />
+                                    </p>
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#">My Account <strong>|</strong></a></li>
+                                <li><a href="Cart.aspx">View Cart <strong>|</strong></a></li>
+                                <li><a href="#modalFaves" data-toggle="modal" data-target="#modalFaves">View Favourites<strong>|</strong></a></li>
+                                <asp:LoginView ID="reviewView" runat="server" >
+                                   <RoleGroups>
+                                    <asp:RoleGroup Roles="administrator">
+                                        <ContentTemplate>
+                                            <li class="admin-link"><a href="Admin/Admin.aspx">Admin Console <strong>|</strong></a></li> 
+                                        </ContentTemplate>
+                                    </asp:RoleGroup>
+                                   </RoleGroups>
+                                 </asp:LoginView>                  
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!--/Utility Navigation-->
+                </div>
+                <!--Container-->
+
+                <!-- MAIN Nav Section -->
+                <div class="container">
+                    <nav class="navbar navbar-inverse main-nav-adj" role="navigation">
+                        <!-- Brand and toggle are grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex2-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="Default.aspx">Welcome</a>
+                        </div>
+                        <!-- NAVIGATION: Dropdown MENU, Collect the nav links, forms, and other content for collapse -->
+                        <div class="collapse navbar-collapse navbar-ex2-collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="active link-adj"><a href="Default.aspx">Home</a></li>
+                                <li><a href="Search.aspx">Advanced Search</a></li>
+                                <li><a href="About.aspx">About Us</a></li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Browse <b class="caret"></b>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="ArtistList.aspx">Artists</a></li>
+                                        <li><a href="ArtworksList.aspx">Art Works</a></li>
+                                        <li><a href="Genres.aspx">Genres</a></li>
+                                        <li><a href="Subjects.aspx">Subjects</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!--/Left MENU-->
+                            <div class="navbar-form navbar-right" role="search">
+                                <div class="form-group">
+                                    <asp:TextBox ID="txtSearch" runat="server" class="form-control search-textbox-adj"
+                                        placeholder="Search Paintings" />
+                                </div>
+                                <asp:LinkButton ID="searchBtn" runat="server" CssClass="btn btn-primary btn-primary-adj"
+                                    OnClick="btnSubmit_click" Text="Search"></asp:LinkButton>
+                            </div>
+                            <!--/Right SEARCH-->
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </nav>
+
+                    <!-- Secondary Navbar Section -->
+                    <nav id="secNav">
+                            <ul class="nav nav-pills pills-adj">
+                                <li class="dropdown secNav-adj"><a href="#" data-toggle="dropdown">Genres<b class="caret"></b></a>
+                                    <ul aria-labelledby="drop4" role="menu" class="dropdown-menu" id="menu1">
+                                        <asp:Repeater ID="genresTopTen" runat="server">
+                                            <ItemTemplate>
+                                                <li><a href="Genres.aspx?query=<%# Eval("GenreId") %>&type=2"><%# Eval("GenreName") %></a>
+                                                </li>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                    </ul>
+                                </li>
+                                <li class="dropdown secNav-adj"><a href="#" data-toggle="dropdown">Subjects<b class="caret"></b></a>
+                                    <ul aria-labelledby="drop4" role="menu" class="dropdown-menu" id="Ul1">
+                                        <asp:Repeater ID="SubjectsTopTen" runat="server">
+                                            <ItemTemplate>
+                                                <li><a href="Subjects.aspx?query=<%# Eval("Id") %>&type=3"><%# Eval("SubjectName") %></a>
+                                                </li>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                    </ul>
+                                </li>
+                                <li class="dropdown secNav-adj"><a href="#" data-toggle="dropdown">Popular Artists<b
+                                    class="caret"></b></a>
+                                    <ul aria-labelledby="drop4" role="menu" class="dropdown-menu" id="Ul2">
+                                        <asp:Repeater ID="PopArtistsTopTen" runat="server">
+                                            <ItemTemplate>
+                                                <li><a href="SingleArtist.aspx?id=<%# Eval("Id") %>"><%# Eval("FullName") %></a>
+                                                </li>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                    </ul>
+                                </li>
+                            </ul>
+                    </nav>
+                    <!--/Secondary Nav-->
+                </div><!--Container-->
+
+                <div class="container topAdBanner">
+                    <asp:AdRotator ID="AdRotator1" runat="server" CssClass="img-responsive img-center" AdvertisementFile="~/Assets/xml/adverts-horizontal.xml" />
+                </div>
+                <!--/Ad Banner Horizontal-->
+                
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+
+                <!-- Modal For the favourites -->
+                <div class="modal fade" id="modalFaves" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="myModalLabel">My Favourites</h4>
+                            </div>
+                            <div class="modal-body">
+                                <uc:Favourites ID="favourites" runat="server" />
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
+
+                <!--Footer Navigation-->
+                <div class="container">
+                    <div class="footer">
+                        <hr />
+                        <ul>
+                            <li>| <a href="Default.aspx">Home</a> | </li>
+                            <li><a href="Search.aspx">Advanced Search</a> | </li>
+                            <li><a href="About.aspx">About Us</a> | </li>
+                            <li><a href="ArtistList.aspx">Artists</a> | </li>
+                            <li><a href="ArtWorksList.aspx">Artworks</a> | </li>
+                            <li><a href="Genres.aspx">Genres</a> | </li>
+                            <li><a href="Subjects.aspx">Subjects</a> | </li>
+                            <li><a href="About.aspx">Copyright &amp; Privacy Policy</a> | </li>
+                            <asp:LoginView ID="logView" runat="server">
+                                <AnonymousTemplate>
+                                    <!--Login and Register Links-->
+                                    <li><a href="Login.aspx">Login</a> | </li>
+                                    <li><a href="Register.aspx">Register</a> | </li>
+                                </AnonymousTemplate>
+                                <LoggedInTemplate>
+                                    <!--Removed Register and Login Link-->
+                                </LoggedInTemplate>
+                            </asp:LoginView>
+                        </ul>
+                        <p class="legal">&copy Copyright 2013 Ron M. | Selenge N. | Hazel L.</p>
+                    </div>
+                </div>
+                <!--Container-->
+
+            </div>
+            <!--/col-md-10-->
+
+            <div class="col-md-1 sideAdBanner">
+                <asp:AdRotator ID="adSide" runat="server" AdvertisementFile="~/Assets/xml/adverts-vertical.xml" />
+            </div>
+            <!--/Ad Banner Vertical-->
+
+    </form>
+
+    <!-- Bootstrap core JavaScript, jQuery (necessary for Bootstrap's JavaScript plugins) -------------------------->
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="Assets/js/bootstrap.min.js"></script>
+    <script src="Assets/js/jquery-2.0.3.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+﻿/* ---------------------------------------Admin/Admin.aspx----------------------------------------------*/
+
+hr {
+    background-color: #21C2F0;
+    height: 3px;
+    margin: 0 5em 0 5em;
+    border: 1px solid #fff;
+}
+
+.main-pg {
+    font-size: large;
+}
+
+.table-adj {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 26em;
+}
+
+.row-adj-admin {     
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-align: left;
+    background-color: #fff;
+    border: 2px solid #21C2F0;
+    border-radius: 10px;
+    width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table-bordered > tbody > tr > td {
+    border: 1px solid #fff; 
+} 
+
+.table-bordered > thead > tr > th {
+    border: 1px solid #fff; 
+} 
+
+td:hover {
+    border-bottom: 4px solid #21C2F0;
+}
+
+tr:hover {
+    border-bottom: 4px solid #21C2F0;
+}
+
+th:hover {
+    border-bottom: 4px solid #21C2F0;
+}
+
+.link-btl {
+    background-color: red;
+    margin: 0;
+}
+
+.required {
+    color: red; 
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+#editView input {
+    border: 1px solid #2D2D2D;
+    border-radius: 7px;
+    padding: 5px;  
+}

@@ -1,0 +1,674 @@
+﻿
+/* ---------------------------------------------MasterPage.master---------------------------------------------*/
+@import url('http://fonts.googleapis.com/css?family=Trykker|Cinzel+Decorative|Roboto:300');
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel Decorative', cursive;
+    color: #CC2D2D;
+}
+
+.web-link {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.link-center {
+    padding-left: 20%;
+}
+
+.spacer-login {
+    padding-right: 10px;
+}
+
+.greet {
+    font-family: 'Roboto', sans-serif;
+    color: #CC2D2D;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 180px;
+    padding: 5px 5px 5px 5px;
+}
+
+.row {
+    padding: 5px;
+    padding-left: 0;
+    border-radius: 10px;
+    margin: 0;
+}
+
+#ContentPlaceHolder1_leaderBoard_UpdatePanelArtWork td:hover {
+    background: #e8f3f6;
+}
+
+#ContentPlaceHolder1_leaderArtists_UpdatePanelArtists td:hover {
+    background: #e8f3f6;
+}
+
+#ContentPlaceHolder1_leaderNewAdditions_UpdatePanelArtWork td:hover {
+    background: #e8f3f6;
+}
+
+.row:nth-child(even) {
+    background: #e8f3f6;
+}
+
+.row-white {
+    background-color: #fff;
+}
+
+#logoNav {
+    float: left;
+    display: block;
+    padding-top: 10px;
+}
+
+.carousel {
+    margin-top: 3em;
+}
+
+.utility-nav {
+    margin-top: 50px;
+    margin-bottom: 5px;
+    float: right;
+    width: 50%;
+}
+
+#utility ul li a:hover {
+    color: #FF8E1C;
+}
+
+.link-adj a {
+    color: #fff;
+}
+
+.main-nav-adj {
+	border: 0.05em solid #080808;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+    margin-bottom: 0;
+}
+
+.btn-primary-adj, .search-textbox-adj {
+    height: 30px;
+    padding-bottom: 5px;
+    margin-top: 2px;
+    font-size: 12px;
+}
+
+.navbar-default {
+    border-color: #fff;
+}
+
+#mainWrapper {  
+    width: 80%;
+    margin: 0 auto;
+}
+
+.nav.navbar-nav.navbar-right a:hover{
+    color: #82DEF8;
+}
+
+.navbar-default .navbar-nav .admin-link > a {
+    color: #FF8E1C;
+}
+
+/*-----------------------Secondary Nav Style------------------------------*/
+
+#secNav {
+    background-image: url("../../Assets/nav-images/nav_bg.jpg");
+    border-radius: 10px;
+    height: 25px;
+    padding-top: 2px;
+    width: 100%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#secNav .nav > li > a {
+    display: block;
+    padding: 0 15px;
+    float: right;
+}
+#ContentPlaceHolder1_panArtWork input, #ContentPlaceHolder1_panArtist input {
+    width:100% !important;
+}
+
+li.secNav-adj {
+    float: right;
+}
+
+.footer ul {
+	list-style: none;
+}
+
+.footer {
+	text-align: center;
+	top: 2px;
+	height: 30px;
+	text-decoration: none;
+	background-color: #FFFFFF;
+    width: 100%;
+}
+
+.footer ul li{
+	display: inline;
+	margin-left: 1px;
+	color: black;
+}
+
+.footer ul li a:link{
+	color: #FF8E1C;
+	text-decoration: none;
+	font-size: 8pt;
+	font-weight: bold;
+}
+
+.footer ul li a:visited {
+	color: #FF8E1C;
+	text-decoration: none;
+	font-size: 8pt;
+	font-weight: bold;
+}
+
+.footer ul li a:hover{
+	color: #FFC14F;
+	text-decoration: none;
+	font-size: 8pt;
+	font-weight: bold;
+}
+
+.legal {
+    border-radius: 10px;
+}
+
+p.legal {
+	background-color: #645F5F;
+	padding: 5px 0 0 0;
+	margin: 0 0 0 10px;
+}
+
+p.legal {
+	text-align:center;
+	padding: 5px 0 8px 0;
+	margin: 0;
+	font: bold .7em Arial;
+	color: #FFF6E5;
+}
+
+.text-muted2 {
+    color: #005C8A;
+}
+
+.fancy-letter {
+    color: #FF8E1C;
+    font-family: 'Trykker', serif;
+    font-size: 30px;
+}
+
+.fl-trail {
+    font-size: 20px;
+}
+
+.dropdown-menu {
+    background-color: #585858;
+    color: #fff;
+}
+
+.dropdown-menu > li > a, .dropdown-header {
+    color: #FFFFFF;
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: #FFC14F;
+}
+
+.item > img {
+  width: 100%;
+}
+
+.thumbnail {
+    border: 2px solid #FF8E1C;
+}
+
+.topAdBanner {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.sideAdBanner {
+    margin: 16em 0 0 0;
+}
+
+.container {
+    width: 100%;
+}
+
+.left-mar {
+    margin-left: 4em;
+}
+
+.review-latest-font {
+    margin: 12px 0 5px 5px;
+    text-align: center;
+    color: #005C8A;
+}
+
+.rev-hr {
+    background-color: #CC2D2D;
+    height: 1px;
+    margin: 5px 2px 5px 2px;
+    border: 1px solid #CC2D2D;
+}
+
+.rev-box {
+    border: 1px solid #CC2D2D;
+}
+
+table#reviewTable th {
+    text-align: center;
+}
+
+table#reviewTable th, td {
+    padding-right: 1em;
+}
+
+/* ---------------------------------------------Leaderboard Controls---------------------------------------------*/
+
+.leaderboard-title {
+    margin: 1.5em 0 0 0;
+}
+
+/* ---------------------------------------------Faves Control----------------------------------------------------*/
+
+.artwork-link {
+    padding: 1.5em 0em 0em 1.5em;
+}
+
+.options {
+    padding-top: 1.5em;
+}
+
+.msrp {
+    padding-top: 1.75em;
+}
+
+.year {
+    padding-top: 1.75em;
+}
+
+.delete {
+    padding-top: 1.75em;
+}
+
+/* ---------------------------------------------SingleArtist.aspx-------------------------------------------------*/
+
+.artist-not-found {
+    display:none;
+}
+
+hr {
+    display: block; height: 1px;
+    border: 0; border-top: 1px solid #ccc;
+    margin: 1em 0; padding: 0; 
+}
+
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.img-circle-border {
+    border: 2px solid #FF8E1C;
+    padding: 5px;
+}
+
+/*---------------------------------------------AddToFavesControl.aspx------------------------------------------------*/
+
+.add-to-faves {
+    padding-top: 0.5em;
+    font-size: 3em;
+    color: #e02323;
+    /**Won't work on IE*/
+    -webkit-transition: all .15s ease-in-out;
+    -moz-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+}
+
+.add-to-faves:hover {
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    transform: scale(1.3);
+    color: #fa0000;
+}
+
+.badge-adj {
+    background-color: #CC2D2D;
+}
+
+/*---------------------------------------------AddToCartControl.aspx---------------------------------------------------*/
+
+.add-to-cart {
+    padding: 0.5em 1em 0 0.5em;
+    font-size: 3em;
+    color: #666;
+    /**Won't work on IE*/
+    -webkit-transition: all .15s ease-in-out;
+    -moz-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+}
+
+.add-to-cart:hover {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+    color: #080808;
+}
+
+.badge-adj-cart {
+    background-color: #585858;
+}
+
+/* ---------------------------------------------SingleArtwork.aspx------------------------------------------------------*/
+
+.width-adj-table-cell {
+    width: 25%;
+}
+
+.review-center {
+    margin-left: 20%;
+}
+
+.fancy-letter-review {
+    color: #FF8E1C;
+    font-family: 'Trykker', serif;
+    font-size: 20px;
+}
+
+.review-width {
+    width: 90%;
+}
+
+.blockquote-adj {
+  border-left: 5px solid #FF7A7A;
+}
+
+.comment-adj > p {
+  font-size: 90%;
+}
+
+.hr-white {
+    background-color: #fff;
+    padding: 5px;
+    border: none;
+    width: 90%;
+}
+
+.glyphicon-star {
+    color: #fff200;
+}
+
+/* Modal Width: A lot of the paintings have a large width rather than just height */
+.large {
+    width: 80%;
+}
+
+.green-price {
+    color: #1aa50b;
+    font-weight: bolder;
+}
+
+.heading-adj {
+    padding: 0;
+    margin: 0;
+}
+
+.glyphicon-star {
+    color: #ffd800;
+}
+
+.rev-left-box {
+    border: 2px solid #CC2D2D;
+    background-color: #fff;
+    margin-left: 15px;
+    margin-top: 20px;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.avgRateHeader {
+    border: 2px solid #005C8A;
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 10px;
+    width: 30%;
+}
+
+/* -----------------------------------Genre/Subjects/ArtistList/ArtworkList.aspx--------------------------------------*/
+
+.row-adj {
+    width: 95%;
+    margin-left: 30px;
+    border: 1px solid #FF8E1C;
+    padding-bottom: 5px;
+}
+
+.thumbnail-adj {
+    background-color: #FFFFCE;
+}
+
+.spacing-gridview {
+    margin-bottom: 20px;
+}
+
+.link-gridview-adj a:link, a:visited {
+    font-size: 1.5em;
+    padding-left: 10%;
+}
+
+#ContentPlaceHolder1_panArtWork input, #ContentPlaceHolder1_panArtist input {
+    width:100% !important;
+    text-align: center;
+}
+
+#ContentPlaceHolder1_artWorkList span, #ContentPlaceHolder1_listArtists span {
+    color: #21C2F0;
+    font-size: 20px;
+    margin: 0 -8px 0 5px;
+    font-weight: bold;
+    padding-right: 15px;
+}
+
+table#ContentPlaceHolder1_listArtists, table#ContentPlaceHolder1_artWorkList { 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#ContentPlaceHolder1_listArtists td, #ContentPlaceHolder1_artWorkList td {
+    width: 15em;
+}
+
+#ContentPlaceHolder1_artWorkList td:last-child {
+    text-align: left;
+    width: 45em;
+}
+
+#ContentPlaceHolder1_listArtists td:last-child {
+    text-align: left;
+    width: 20em;
+}
+
+/**-----------------------------------------Search.aspx ------------------------------------------------------------*/
+
+.moreCriteria
+{
+    width: 320px;
+}
+
+.btn-search-adj {
+  margin-top: 10px;
+  width:  100px;
+  display: block;
+
+}
+
+/* ---------------------------------------Login/Register.aspx------------------------------------------------------*/
+
+.loginboxTitle { 
+    font-family: 'Roboto', sans-serif;
+    color: #CC2D2D;
+    font-size: large;
+    margin-right: 20px;
+}
+
+.loginBox, .regBox {
+    background-color: #FFFFCE;
+    padding: 15px 15px 8px 15px;
+}
+
+/* Login */
+
+table#ContentPlaceHolder1_logView_aLogin td {
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+#ContentPlaceHolder1_logView_aLogin td {
+    padding: 0 10px 8px 0;
+}
+
+#ContentPlaceHolder1_logView_aLogin input {
+    border: 1px solid #2D2D2D;
+    border-radius: 7px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+#ContentPlaceHolder1_logView_aLogin input:focus { 
+    outline: none;
+    border-color: #21C2F0;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+#ContentPlaceHolder1_logView_aLogin label {
+    padding-left: 10px;
+}
+
+#ContentPlaceHolder1_logView_aLogin_LoginButton {
+    color: #ffffff;
+    background-color: #585858;
+    width: 70px;
+}
+
+#ContentPlaceHolder1_logView_aLogin_LoginButton:hover {
+    background-color: #4b4b4b;
+}
+
+/* Login Warnings */
+
+#ContentPlaceHolder1_logView_aLogin_UserNameRequired {
+    color: red; 
+    font-weight: bold;
+}
+
+#ContentPlaceHolder1_logView_aLogin_PasswordRequired {
+    color: red; 
+    font-weight: bold;
+}
+
+/* Register */
+
+table#ContentPlaceHolder1_CreateUserWizard1 td {
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 8px;
+}
+
+#ContentPlaceHolder1_CreateUserWizard1 td {
+    padding: 2px 0 0 0;
+}
+
+#ContentPlaceHolder1_CreateUserWizard1 input {
+    border: 1px solid #2D2D2D;
+    border-radius: 7px;
+    padding: 5px; 
+    width: 90%;   
+    margin-right: 10px; 
+}
+
+#ContentPlaceHolder1_CreateUserWizard1 input:focus { 
+    outline: none;
+    border-color: #21C2F0;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+#ContentPlaceHolder1_CreateUserWizard1 label {
+    padding-left: 10px;
+}
+
+#ContentPlaceHolder1_CreateUserWizard1___CustomNav0_StepNextButtonButton {
+    color: #ffffff;
+    background-color: #585858;
+    width: 90px;
+}
+
+#ContentPlaceHolder1_CreateUserWizard1___CustomNav0_StepNextButtonButton:hover {
+    background-color: #4b4b4b;
+}
+
+#ContentPlaceHolder1_CreateUserWizard1_CompleteStepContainer_ContinueButtonButton {
+    color: #ffffff;
+    background-color: #585858;
+    width: 90px;
+}
+
+#ContentPlaceHolder1_CreateUserWizard1_CompleteStepContainer_ContinueButtonButton:hover {
+    background-color: #4b4b4b;
+}
+
+/* Register Warnings */
+
+#ContentPlaceHolder1_CreateUserWizard1_CreateUserStepContainer_ConfirmPasswordRequired  {
+    color: red;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+#ContentPlaceHolder1_CreateUserWizard1_CreateUserStepContainer_QuestionRequired {
+    color: red; 
+    font-weight: bold;
+}
+
+#ContentPlaceHolder1_CreateUserWizard1_CreateUserStepContainer_AnswerRequired {
+    color: red; 
+    font-weight: bold;
+}
+
+#ContentPlaceHolder1_CreateUserWizard1_CreateUserStepContainer_EmailRequired {
+    color: red; 
+    font-weight: bold;
+}
+
+#ContentPlaceHolder1_CreateUserWizard1_CreateUserStepContainer_PasswordRequired {
+    color: red; 
+    font-weight: bold;
+}
+
+#ContentPlaceHolder1_CreateUserWizard1_CreateUserStepContainer_UserNameRequired {
+    color: red; 
+    font-weight: bold;
+}
+
+#ContentPlaceHolder1_CreateUserWizard1_CreateUserStepContainer_PasswordCompare {
+    color: red; 
+    font-weight: bold;
+    padding-left: 20px;
+}

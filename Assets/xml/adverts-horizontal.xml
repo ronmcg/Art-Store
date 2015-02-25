@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Advertisements>
+  <Ad>
+    <ImageUrl>~/assets/nav-images/adBanTop.jpg</ImageUrl>
+    <NavigateUrl>~/SingleArtwork.aspx?id=118</NavigateUrl>
+    <AlternateText>Dynamism of a Dog on a Leash</AlternateText>
+    <Impressions>1</Impressions>
+    <Height>90px</Height>
+    <Width>728px</Width>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/assets/nav-images/adtop2.png</ImageUrl>
+    <NavigateUrl>~/SingleArtwork.aspx?id=259</NavigateUrl>
+    <AlternateText>Boogie Woogie</AlternateText>
+    <Impressions>1</Impressions>
+    <Height>90px</Height>
+    <Width>728px</Width>
+  </Ad>
+  <Ad>
+    <ImageUrl>~/assets/nav-images/adtop3.png</ImageUrl>
+    <NavigateUrl>~/SingleArtwork.aspx?id=105</NavigateUrl>
+    <AlternateText>Charing Cross Bridge</AlternateText>
+    <Impressions>1</Impressions>
+    <Height>90px</Height>
+    <Width>728px</Width>
+  </Ad>
+</Advertisements>
